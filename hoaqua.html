@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tra cứu giá hoa quả</title>
+</head>
+<body>
+    <div style="border: 1px solid #333; width: 320px; padding: 15px;">
+        <h2 style="margin-top: 0;">Giá hoa quả</h2>
+        <input type="text" id="ten_hoa_qua" placeholder="Ví dụ: Măng Cụt">
+        <button onclick="xemGia()">Xem giá</button>
+        <h3 id="gia_hoa_qua"></h3>
+    </div>
+
+    <script>
+        function xemGia() {
+            let ten = document.getElementById("ten_hoa_qua").value;
+            let gia = "";
+
+            switch (ten) {
+                case "Ổi":
+                case "Dưa Hấu":
+                    gia = "20000 VNĐ/kg";
+                    break;
+                case "Táo":
+                    gia = "30000 VNĐ/kg";
+                    break;
+                case "Cam":
+                case "Chôm Chôm":
+                    gia = "40000 VNĐ/kg";
+                    break;
+                case "Măng Cụt":
+                    gia = "50000 VNĐ/kg";
+                    break;
+                default:
+                    gia = "Tìm không thấy";
+            }
+
+            document.getElementById("gia_hoa_qua").innerHTML = gia;
+        }
+    </script>
+</body>
+</html>
